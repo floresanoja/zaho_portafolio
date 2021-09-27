@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<title>Zahorí Lacau Portafolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: Helvetica, sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('');
+  min-height: 100%;
+}
+</style>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:70%">
+  <div class="bgimg" id="bgimg">
+    <img src="/Photos/grid-5.png" id="bgimg"  style="width: 100%; margin-left:5px; margin-top: 50px;">
+  </div>
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="reel.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()" target="blank">Reel</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Gallery</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
+  </div>
+  <div class="row">
+  <div class="column">
+    <img src="/Photos/grid-1.png" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-2.png" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-3.png" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-4.png" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+    <img src="/Photos/grid-5.png" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-6.png" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-7.png" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>        
+  <div class="column">
+    <img src="/Photos/grid-8.png" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+    <div class="column">
+    <img src="/Photos/grid-8.png" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-10.png" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-11.png" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-12.png" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-13.png" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/Photos/grid-14.png" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+    function openNav() {
+  document.getElementById("mySidebar").style.width = "30%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+</body>
+</nav>
